@@ -1,0 +1,18 @@
+#设置端口号
+server:
+  port: 9006
+spring:
+  application:
+    name: huahua-spit
+  data:
+    mongodb:
+      host: 39.97.117.83
+      database: spitdb
+      port: 27017
+  redis:
+    host: 192.168.118.129
+    port: 6379
+
+jwt:
+  config:
+    key: itcast

@@ -1,0 +1,30 @@
+server: 
+  port: 9008
+spring: 
+  application:  
+    name: huahua-user #指定服务名
+  datasource:  
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.97.117.83:3306/huahua_user?characterEncoding=UTF8
+    username: root
+    password: 123456
+  jpa: 
+    database: MySQL
+    show-sql: true
+  redis:
+    host: 192.168.118.129
+    port: 6379
+  rabbitmq:
+    host: 192.168.118.129
+
+jwt:
+  config:
+    key: itcast
+    ttl: 360000
+
+eureka:
+  client:
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://127.0.0.1:7000/eureka
+  instance:
+    prefer-ip-address: true

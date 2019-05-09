@@ -1,0 +1,46 @@
+#设置端口号
+server:
+  port: 9004
+
+  ###设置项目名称(项目名称不能使用下横杠)  用于以后spring cloud服务的查找
+spring:
+  application:
+    name: huahua-article
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.97.117.83:3306/huahua_article?characterEncoding=utf8
+    username: root
+    password: 123456
+  redis:
+    host: 192.168.118.129
+    port: 6379
+  data:
+    mongodb:
+      host: 39.97.117.83
+      port: 27017
+      database: recruitdb
+
+  #jpa的配置
+  jpa:
+    database: mysql
+    show-sql: true
+    generate-ddl: true
+
+
+
+
+
+#日志级别
+logging:
+  level:
+    root: info
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Premiere.ltd:8761/eureka
+  instance:
+    #服务名称的修改
+    instance-id: ${spring.application.name}:${server.port}:1.0-SNAPSHOT
+    #访问信息提示IP信息
+    #prefer-ip-address: false

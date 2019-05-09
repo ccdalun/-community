@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$陈柏郎$</title>
+    <script src="../js/echarts.min.js"></script>
+</head>
+<body>
+    <div id="zzt" style="width: 600px;height: 400px"></div>
+</body>
+<script type="text/javascript">
+        var mychart = echarts.init(document.getElementById("zzt"));
+        var option={
+            title: {
+                text: '陈柏郎'
+            },
+            tooltip: {},
+            legend: {
+                data:['成绩']
+            },
+            xAxis: {
+                data: ["C","Java","PHP","CIA"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [90, 95, 90, 100]
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        mychart.setOption(option);
+        mychart.hideLoading();
+
+
+        
+</script>
+</html>

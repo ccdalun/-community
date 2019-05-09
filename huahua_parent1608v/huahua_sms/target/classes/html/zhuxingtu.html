@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Highcharts 教程 | 陈百倫现学现卖</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+<script language="JavaScript">
+    $(document).ready(function() {
+        var data = {
+            table: 'datatable'
+        };
+        var chart = {
+            type: 'column'
+        };
+        var title = {
+            text: '1608V考试成绩'
+        };
+        var yAxis = {
+            allowDecimals: false,
+            title: {
+                text: '考试分数'
+            }
+        };
+        var tooltip = {
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    this.point.y + ' ' + this.point.name.toLowerCase();
+            }
+        };
+        var credits = {
+            enabled: false
+        };
+
+        var json = {};
+        json.chart = chart;
+        json.title = title;
+        json.data = data;
+        json.yAxis = yAxis;
+        json.credits = credits;
+        json.tooltip = tooltip;
+        $('#container').highcharts(json);
+    });
+
+</script>
+<table id="datatable">
+    <thead>
+    <tr><th></th><th>JAVA</th>&nbsp;<th>C</th>&nbsp;<th>PHP</th></tr>
+    </thead>
+    <tbody>
+    <tr><th>陈某</th><td>80</td>&nbsp;<td>95</td>&nbsp;<td>10</td></tr>
+    <tr><th>徐某</th><td>85</td>&nbsp;<td>90</td>&nbsp;<td>11</td></tr>
+    <tr><th>张某</th><td>90</td>&nbsp;<td>85</td>&nbsp;<td>12</td></tr>
+    <tr><th>安某</th><td>95</td>&nbsp;<td>80</td>&nbsp;<td>13</td></tr>
+    </tbody>
+</table>
+</body>
+</html>

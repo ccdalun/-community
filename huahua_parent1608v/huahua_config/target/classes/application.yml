@@ -1,0 +1,19 @@
+server:
+  port: 12000
+
+spring:
+  application:
+    name: huahua-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/bailuncc_1608/Bailun-huahua.git
+  rabbitmq:
+    host: 192.168.118.129
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
